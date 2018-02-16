@@ -1,4 +1,4 @@
-# AIDS/LifeCycle SMS Service
+<img src="public/images/logo-blue-450px-github.png">
 
 - [Overview](#overview)
 - [Requirements](#requirements)
@@ -58,9 +58,21 @@ set DEBUG=myapp:* & npm start
 
 ___Request___: As you work, please keep your branch up-to-date with the Master branch. This save a lot of time and headaches and ensure your work is committed to Master.
 
-### Twilio API keys
+### Twilio
+
+#### API Keys
 
 The keys are stored in a `.env` file located in the root of the project. Contact _@jefflowy_ for access to the Twilio API keys.
+
+#### Quick start documentation
+
+| Title                                                        | Description                                                  |
+| ------------------------------------------------------------ | ------------------------------------------------------------ |
+| [Twilio Quest](https://www.twilio.com/quest/welcome)         | TwilioQuest is an interactive, self-paced game where you learn how to use  products, features, and concepts. |
+| [Getting Started with Twilio](https://www.youtube.com/watch?v=rrx4ux-hChw) (6:30) | Getting started video                                        |
+| [Launch an SMS app in 5 minutes](https://www.youtube.com/watch?v=qnrtIUBlnzk) (5:12) | Learn how to configure and deploy an SMS broadcast application with Twilio functions. You can use this app to broadcast SMS messages to large numbers of people who have subscribed to your updates. |
+
+
 
 ### 3rd Party Documentation 
 
