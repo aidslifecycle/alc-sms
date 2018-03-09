@@ -1,10 +1,9 @@
-import Header from '../components/Header';
+import Layout from '../components/Layout';
 
 const Index = () => {
-	return (<div>
-           <Header />
+	return (<Layout>
            <p>Hello Next.js</p>
-         </div>);
+         </Layout>);
 }
 
 export default Index;
