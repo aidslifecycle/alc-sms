@@ -4,7 +4,8 @@
   "main": "app.js",
   "version": "1.0.0",
   "scripts": {
-    "start": "node ./bin/www"
+    "start": "next",
+    "dev": "next"
   },
   "dependencies": {
     "body-parser": "~1.15.1",
@@ -13,7 +14,14 @@
     "express": "~4.13.4",
     "hbs": "~4.0.0",
     "morgan": "~1.7.0",
+    "next": "^5.0.0",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
     "serve-favicon": "~2.3.0"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "eslint": "^4.18.2",
+    "eslint-plugin-react": "^7.7.0"
+  }
 }
