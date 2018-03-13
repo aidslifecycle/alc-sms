@@ -1,0 +1,39 @@
+/* Remove border radius */
+* {
+  border-radius: 0 !important;
+}
+
+nav {
+  margin-bottom:32px;
+}
+
+div.card {
+  margin-bottom:16px;
+  box-shadow: 0 0.1em 0.1em rgba(90, 97, 105, 0.1), 0 0.1375rem 0.40625rem rgba(90, 97, 105, 0.1), 0 0.25rem 0.53125rem rgba(90, 97, 105, 0.12), 0 0.025rem 0.0875rem rgba(90, 97, 105, 0.1);
+}
+
+.card-header.message {
+  background-color: rgb(218, 218, 218) !important;
+}
+
+div.bg-primary h3 {
+  color: white;
+  margin-bottom:0px;
+  font-size: 1.6em;
+}
+
+p {
+  margin-bottom: 0px !important;
+}
+
+li.list-group-item h6 {
+  margin-bottom:0.25rem;
+}
+
+h5.bg-dark {
+  color:white;
+}
+
+.card-body a {
+  margin-top:16px;
+}
