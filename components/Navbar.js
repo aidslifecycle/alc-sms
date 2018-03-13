@@ -1,4 +1,7 @@
-const Navbar = (props) => {
+import NavGroupLink from './NavGroupLink';
+import Link from 'next/link';
+
+const Navbar = () => {
 	return (
 		<nav className="navbar navbar-expand-lg navbar-dark bg-dark">
     <a className="navbar-brand" href="#">
@@ -10,24 +13,24 @@ const Navbar = (props) => {
     <div className="collapse navbar-collapse" id="navbarToggler">
         <ul className="navbar-nav mr-auto mt-2 mt-lg-0">
             <li className="nav-item active">
-                <a className="nav-link" href="#">Home</a>
+                <Link href="/">
+                <a className="nav-link">Home</a>
+                </Link>
             </li>
             <li className="nav-item dropdown">
                 <a className="nav-link dropdown-toggle" href="#" id="groupDropdown" data-toggle="dropdown">
                     Groups
                 </a>
                 <div className="dropdown-menu">
-                    <a className="dropdown-item" href="#">AIDS/LifeCycle</a>
-                    <a className="dropdown-item" href="#">Count</a>
-                    <a className="dropdown-item" href="#">Emergency Operations</a>
-                    <a className="dropdown-item" href="#">Count</a>
-                    <a className="dropdown-item" href="#">Lost & Found</a>
-                    <a className="dropdown-item" href="#">Medical</a>
-                    <a className="dropdown-item" href="#">Participant Support</a>
-                    <a className="dropdown-item" href="#">Route</a>
-                    <a className="dropdown-item" href="#">Special Events</a>
-                    <a className="dropdown-item" href="#">Staff</a>
-
+                    <NavGroupLink title="AIDS/LifeCycle" />
+                    <NavGroupLink title="Count" />
+                    <NavGroupLink title="Emergency Operations" />
+                    <NavGroupLink title="Lost &amp; Found"/>
+                    <NavGroupLink title="Medical" />
+                    <NavGroupLink title="Participant Support" />
+                    <NavGroupLink title="Route" />
+                    <NavGroupLink title="Special Events"/>
+                    <NavGroupLink title="Staff" />
                 </div>
             </li>
         </ul>
