@@ -4,7 +4,7 @@
   "main": "app.js",
   "version": "1.0.0",
   "scripts": {
-    "start": "node ./bin/www",
+    "start": "next",
     "dev": "next"
   },
   "dependencies": {
