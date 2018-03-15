@@ -1,4 +1,4 @@
-<img src="public/images/logo-blue-450px-github.png">
+<img src="static/images/logo-blue-450px-github.png">
 
 - [Overview](#overview)
 - [Requirements](#requirements)
@@ -77,17 +77,14 @@ The keys are stored in a `.env` file located in the root of the project. Contact
 ### 3rd Party Documentation 
 
 - [Bootstrap 4](https://getbootstrap.com/)
-- [jQuery 3.2.1](http://api.jquery.com/)
 - [Shards UI](https://designrevision.com/docs/shards/)
 - [Socket.io](https://socket.io/)
 - [Twilio](https://www.twilio.com/docs/)
 
 ### Todo / Wish list
-- [ ] Separate handlebars `index.hbs` into components
+- [x] Replace Handlebars with Next.js and componentize page elements.
 - [ ] Connect to Twilio API
-- [ ] Define/plan DB schemas
-- [ ] Create DB schemas
-- [ ] Create dashboard of channels
-- [ ] Create layout for each channel
+- [x] Create dropdown of channels 
+- [x] Create dynamic route for each channel
 - [ ] Service worker (cache CSS and JS)
 - [ ] Add support for [Socket.io](https://socket.io/) - append new message to top of container when text sent/received
