@@ -1,4 +1,5 @@
 import MessageCard from '../components/MessageCard';
+import MessageForm from '../components/MessageForm';
 import GroupInfoCard from '../components/GroupInfoCard';
 
 const ChannelFeed = () => {
@@ -12,6 +13,7 @@ const ChannelFeed = () => {
         <div className="col-sm-12 col-md-9">
           <div className="row">
             <div className="col-sm-12 col-md-8">
+            <MessageForm title="MessageForm" />
               { cards }
             </div>
             <div className="col-sm-12 col-md-4 d-none d-sm-block">
