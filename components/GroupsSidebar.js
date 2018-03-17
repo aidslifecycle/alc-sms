@@ -2,8 +2,8 @@ const GroupsSidebar = (props) => {
  return (
 	<div className="col-sm-12 col-md-3 d-none d-sm-block">
 	<div className="card">
-		<div className="card-header bg-primary">
-			<h3>Your Groups</h3>
+		<div className="card-header bg-dark">
+			<h3 className="text-white">Your Groups</h3>
 		</div>
 		<ul className="list-group list-group-flush">
 			<li className="list-group-item">
