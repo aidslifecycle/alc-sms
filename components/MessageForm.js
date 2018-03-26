@@ -4,6 +4,7 @@ class MessageForm extends React.Component {
 
   alertOnClick(e) {
     e.preventDefault();
+
   }
 
   render () {
@@ -12,12 +13,12 @@ class MessageForm extends React.Component {
       <div className="card-body">
         <form>
           <div className="form-group">
-            <textarea className="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Enter a message"></textarea>
+            <textarea className="form-control" id="messageArea" rows="3" placeholder="Enter a message"></textarea>
           </div>
           <button type="submit" className="btn btn-primary" onClick={(e)=>this.alertOnClick(e)}>Submit</button>
         </form>
       </div>
-    </div>)
+    </div>);
   }
 };
 
