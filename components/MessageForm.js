@@ -9,13 +9,13 @@ class MessageForm extends React.Component {
 
   render () {
     return (<div className="card">
-      <h5 className="card-header bg-primary text-white">{ this.props.title }</h5>
+      <h5 className="card-header bg-primary text-white">{this.props.title}</h5>
       <div className="card-body">
-        <form>
+        <form action="sms/test" method="post">
           <div className="form-group">
-            <textarea className="form-control" id="messageArea" rows="3" placeholder="Enter a message"></textarea>
+            <textarea className="form-control" name="message" id="message" rows="3" placeholder="Enter a message"></textarea>
           </div>
-          <button type="submit" className="btn btn-primary" onClick={(e)=>this.alertOnClick(e)}>Submit</button>
+          <button type="submit" className="btn btn-primary">Submit</button>
         </form>
       </div>
     </div>);
