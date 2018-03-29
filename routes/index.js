@@ -2,17 +2,15 @@ const router = require('express').Router();
 const request = require('request');
 
 router.post('/:channel', (req, res) => {
+  console.log(req.body);
   reqPromise().then(data => {
-    console.log(data);
-  });
-
-  res.json({
-    'message': 'received'
+    res.json({
+      'message': data
+    });
   });
 });
 
 function reqPromise() {
-
   return new Promise((resolve, reject) => {
     request('https://us-central1-alc-sms.cloudfunctions.net/helloWorld', (err, res, body) => {
       if (err) {
@@ -21,7 +19,6 @@ function reqPromise() {
       resolve(body);
     });
   });
-
 }
 
 module.exports = router;
