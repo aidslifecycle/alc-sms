@@ -8,11 +8,8 @@ const Post = (props) => {
             <div className="container">
               <div className="row">
                 <div className="col-sm-12">
-                  <h1>{ props.url.query.title }</h1>
-                  <p>This is the
-                    { props.url.query.title } page</p>
+                  <h2>{ props.url.query.title }</h2>
                   <div className="row">
-                    <GroupsSidebar />
                     <ChannelFeed />
                   </div>
                 </div>
