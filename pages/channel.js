@@ -3,12 +3,11 @@ import GroupsSidebar from '../components/GroupsSidebar';
 import ChannelFeed from '../components/ChannelFeed';
 
 const Channel = (props) => {
-
   return (<Layout>
             <div className="container">
               <div className="row">
                 <div className="col-sm-12">
-                  <h2>{ props.url.query.title }</h2>
+                  <h2>{ props.title }</h2>
                   <div className="row">
                     <ChannelFeed />
                   </div>
@@ -19,10 +18,11 @@ const Channel = (props) => {
 };
 
 Channel.getInitialProps = async function (context) {
-  const cons = context
-  console.log("Context", cons)
+  // @todo: Fix title when page refreshes on a channel
+  const title = context.query.title || "AIDS/LifeCycle";
+  console.log("Context", title);
   return {
-    id: "hello"
+    title: title
   }
 }
 
