@@ -10,13 +10,13 @@ const ChannelFeed = () => {
     });
 
     return (
-        <div className="col-sm-12 col-md-9">
+        <div className="col-sm-12 col-md-12">
           <div className="row">
-            <div className="col-sm-12 col-md-8">
+            <div className="col-sm-12 col-md-9">
             <MessageForm title="Message Form" />
               { cards }
             </div>
-            <div className="col-sm-12 col-md-4 d-none d-sm-block">
+            <div className="col-sm-12 col-md-3 d-none d-sm-block">
               <GroupInfoCard />
             </div>
           </div>

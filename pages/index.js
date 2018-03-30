@@ -6,7 +6,6 @@ const Index = () => {
 	return (<Layout>
            <div className="container">
              <div className="row">
-               <GroupsSidebar />
                <ChannelFeed />
              </div>
            </div>

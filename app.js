@@ -1,3 +1,4 @@
+require('dotenv').config();
 const express = require('express');
 const next = require('next');
 
@@ -20,17 +21,28 @@ app.prepare()
       extended: true
     }));
 
+    // Handle requests that require SMS functions
+    server.use('/sms/', routes);
+
+    // Server Side Support for Clean URLs
+    server.get('/channel/:id', (request, response) => {
+      const page = '/channel';
+      const queryParams = {
+        title: request.params.title
+      };
+      app.render(request, response, page, queryParams);
+    });
+
     // Handle App Requests
     server.get('*', (req, res) => {
       return handle(req, res);
     });
 
-    // Handle requests that require SMS functions
-    server.use('/sms/', routes);
-
     // Start custom server
-    server.listen(port, (err) => {
-      if (err) throw err
+    server.listen(port, (error) => {
+      if (error) {
+        throw error;
+      }
       console.log(`> Ready on http://localhost:${port}`);
     });
   });
