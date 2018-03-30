@@ -1,9 +1,11 @@
 const router = require('express').Router();
 const request = require('request');
+const sendMessage = require('./twilio');
 
 router.post('/:channel', (req, res) => {
   console.log(req.body);
   reqPromise().then(data => {
+    // sendMessage(toNum, fromNum, data);
     res.json({
       'message': data
     });

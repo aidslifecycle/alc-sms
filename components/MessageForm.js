@@ -18,7 +18,7 @@ class MessageForm extends React.Component {
     return (<div className="card">
               <h5 className="card-header bg-primary text-white">{ this.props.title }</h5>
               <div className="card-body">
-                <form action="/" method="post" onClick={ (event) => {
+                <form action="/" method="post" onSubmit={ (event) => {
                                                            this.sendMessage(event);
                                                          } }>
                   <div className="form-group">
