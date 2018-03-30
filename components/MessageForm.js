@@ -5,7 +5,7 @@ class MessageForm extends React.Component {
   sendMessage(event) {
     event.preventDefault();
 
-    fetch('sms/test', {
+    fetch('/sms/test', {
       method: 'POST',body: {'message': 'heelo'},headers: {'content-type': 'application/json'}
     }).then(res => {
       return res.json();

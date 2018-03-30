@@ -7,7 +7,7 @@ router.post('/:channel', (req, res) => {
   reqPromise().then(data => {
     // sendMessage(toNum, fromNum, data);
     res.json({
-      'message': data
+      'message': 'hello'
     });
   });
 });
