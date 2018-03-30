@@ -2,7 +2,7 @@ import Layout from '../components/Layout';
 import GroupsSidebar from '../components/GroupsSidebar';
 import ChannelFeed from '../components/ChannelFeed';
 
-const Post = (props) => {
+const Channel = (props) => {
 
   return (<Layout>
             <div className="container">
@@ -18,4 +18,12 @@ const Post = (props) => {
           </Layout>);
 };
 
-export default Post;
+Channel.getInitialProps = async function (context) {
+  const cons = context
+  console.log("Context", cons)
+  return {
+    id: "hello"
+  }
+}
+
+export default Channel;

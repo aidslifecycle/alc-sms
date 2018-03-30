@@ -25,11 +25,13 @@ app.prepare()
     server.use('/sms/', routes);
 
     // Server Side Support for Clean URLs
-    server.get('/channel/:id', (req, res) => {
-      const actualPage = '/post';
-      const queryParams = { title: req.params.title } 
-      app.render(req, res, actualPage, queryParams)
-    })
+    server.get('/channel/:id', (request, response) => {
+      const page = '/channel';
+      const queryParams = {
+        title: request.params.title
+      };
+      app.render(request, response, page, queryParams);
+    });
 
     // Handle App Requests
     server.get('*', (req, res) => {
@@ -37,8 +39,10 @@ app.prepare()
     });
 
     // Start custom server
-    server.listen(port, (err) => {
-      if (err) throw err
+    server.listen(port, (error) => {
+      if (error) {
+        throw error;
+      }
       console.log(`> Ready on http://localhost:${port}`);
     });
   });
