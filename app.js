@@ -21,13 +21,20 @@ app.prepare()
       extended: true
     }));
 
+    // Handle requests that require SMS functions
+    server.use('/sms/', routes);
+
+    // Server Side Support for Clean URLs
+    server.get('/channel/:id', (req, res) => {
+      const actualPage = '/post';
+      const queryParams = { title: req.params.title } 
+      app.render(req, res, actualPage, queryParams)
+    })
+
     // Handle App Requests
     server.get('*', (req, res) => {
       return handle(req, res);
     });
-
-    // Handle requests that require SMS functions
-    server.use('/sms/', routes);
 
     // Start custom server
     server.listen(port, (err) => {
