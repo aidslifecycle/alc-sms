@@ -1,7 +1,7 @@
 require('dotenv').config();
 const express = require('express');
 const next = require('next');
-
+var cors = require('cors');
 const port = parseInt(process.env.PORT, 10) || 3000;
 const dev = process.env.NODE_ENV !== 'production';
 const app = next({
@@ -16,6 +16,7 @@ app.prepare()
 
     // Create and setup server
     const server = express();
+    server.use(cors());
     server.use(bodyParser.json());
     server.use(bodyParser.urlencoded({
       extended: true
