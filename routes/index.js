@@ -1,39 +1,29 @@
 const router = require('express').Router();
-const request = require('request');
-const sendMessage = require('./twilio');
 
-router.post('/:channel', (req, res) => {
-  console.log(req.body);
-  reqPromise().then(data => {
-    // sendMessage(toNum, fromNum, data);
-    res.json({
-      'message': 'hello'
-    });
+router.post('/login', (req, res) => {
+  if (!req.body) return res.sendStatus(400);
+
+  const token = req.body.token;
+
+  firebase.auth().verifyIdToken(token)
+    .then((decodedToken) => {
+      req.session.decodedToken = decodedToken;
+      return decodedToken;
+    })
+    .then((decodedToken) => res.json({
+      status: true,
+      decodedToken
+    }))
+    .catch((error) => res.json({
+      error
+    }));
+});
+
+router.post('/logout', (req, res) => {
+  req.session.decodedToken = null;
+  res.json({
+    status: true
   });
 });
 
-function reqPromise() {
-  return new Promise((resolve, reject) => {
-    request('https://us-central1-alc-sms.cloudfunctions.net/helloWorld', (err, res, body) => {
-      if (err) {
-        reject(err);
-      }
-      resolve(body);
-    });
-  });
-}
-
 module.exports = router;
-
-
-/**
-   * Examples of other types of Express/Next requests
-   * 
-   server.get('/a', (req, res) => {
-    return app.render(req, res, '/about', req.query);
-  });
-
-  server.get('/posts/:id', (req, res) => {
-    return app.render(req, res, '/posts', { id: req.params.id });
-  });
-   */
