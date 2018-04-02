@@ -32,15 +32,15 @@ app.prepare()
     }));
 
     // Session Middleware
-    server.use(session({
-      secret: 'geheimnis',
-      saveUninitialized: true,
-      store: new FileStore({path: '/tmp/sessions', secret: 'geheimnis'}),
-      resave: false,
-      rolling: true,
-      httpOnly: true,
-      cookie: { maxAge: 604800000 } // week
-    }));
+    // server.use(session({
+    //   secret: 'geheimnis',
+    //   saveUninitialized: true,
+    //   store: new FileStore({path: '/tmp/sessions', secret: 'geheimnis'}),
+    //   resave: false,
+    //   rolling: true,
+    //   httpOnly: true,
+    //   cookie: { maxAge: 604800000 } // week
+    // }));
 
     server.use((req, res, next) => {
       req.firebaseServer = firebase;
@@ -48,7 +48,7 @@ app.prepare()
     });
 
     // Handle requests to the API route
-    server.use('/api/', routes);
+    server.use('/api', routes);
 
     // Server Side Support for Clean URLs
     server.get('/channel/:id', (request, response) => {

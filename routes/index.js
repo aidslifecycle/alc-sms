@@ -26,4 +26,11 @@ router.post('/logout', (req, res) => {
   });
 });
 
+router.post('/message/:channel', (req, res) => {
+    // sendMessage(toNum, fromNum, data);
+    res.json({
+      'message': 'hello'
+    });
+});
+
 module.exports = router;
