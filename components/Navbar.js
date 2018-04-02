@@ -25,6 +25,7 @@ const Navbar = () => {
                     <NavGroupLink title="Route" id="the-route" />
                     <NavGroupLink title="Special Events" id="special-events" />
                     <NavGroupLink title="Staff" id="staff" />
+                    <a href="/login" className="dropdown-item">Log Out</a>
                   </div>
                 </li>
               </ul>

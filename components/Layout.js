@@ -11,7 +11,6 @@ const Layout = (props) => {
       <link rel="stylesheet" href="/static/stylesheets/bootstrap.min.css" />
       <link rel="stylesheet" href="/static/stylesheets/shards.css" />
       <link rel="stylesheet" href="/static/stylesheets/style.css" />
-      <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script>
     </Head>
     <body>
       <Navbar/>
